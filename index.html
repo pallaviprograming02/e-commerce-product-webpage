@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="top-nav">
+      <div class="brand">
+        <span class="brand-mark">M</span>
+        <span>ModernStore</span>
+      </div>
+      <nav>
+        <a href="#">New Arrivals</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Accessories</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn" aria-label="Search">🔎</button>
+        <button class="icon-btn cart-btn" aria-label="Cart">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="product-layout">
+      <section class="gallery-panel">
+        <div class="main-image-wrap">
+          <img id="mainImage" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=80" alt="Product preview" />
+        </div>
+        <div class="thumbnail-row">
+          <img class="thumb active" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80" alt="Thumbnail 1" />
+          <img class="thumb" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" alt="Thumbnail 2" />
+          <img class="thumb" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" alt="Thumbnail 3" />
+          <img class="thumb" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=300&q=80" alt="Thumbnail 4" />
+        </div>
+      </section>
+
+      <section class="details-panel">
+        <p class="eyebrow">Featured Collection</p>
+        <h1>Urban Essentials Hoodie</h1>
+        <div class="rating-row">
+          <span>★★★★☆</span>
+          <span>4.8 (1,248 reviews)</span>
+        </div>
+        <div class="price-row">
+          <h2>$79.99</h2>
+          <span class="discount">Save 20%</span>
+        </div>
+        <p class="description">A premium oversized hoodie crafted for daily comfort with a soft fleece interior and modern streetwear fit.</p>
+
+        <div class="option-group">
+          <span>Color</span>
+          <div class="color-options">
+            <button class="color active" data-color="Slate" style="--swatch:#5b6b7d"></button>
+            <button class="color" data-color="Olive" style="--swatch:#7a8c4b"></button>
+            <button class="color" data-color="Black" style="--swatch:#1f1f1f"></button>
+          </div>
+        </div>
+
+        <div class="option-group">
+          <span>Size</span>
+          <div class="size-options">
+            <button class="size active">S</button>
+            <button class="size">M</button>
+            <button class="size">L</button>
+            <button class="size">XL</button>
+          </div>
+        </div>
+
+        <div class="option-group quantity-group">
+          <span>Quantity</span>
+          <div class="quantity-selector">
+            <button class="qty-btn" id="decreaseQty">−</button>
+            <span id="quantityValue">1</span>
+            <button class="qty-btn" id="increaseQty">+</button>
+          </div>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn-primary" id="addToCart">Add to Cart</button>
+          <button class="btn btn-secondary">Wishlist</button>
+        </div>
+
+        <div class="spec-list">
+          <div><strong>Free Shipping</strong><span>Orders over $100</span></div>
+          <div><strong>Easy Returns</strong><span>30-day policy</span></div>
+          <div><strong>Delivery</strong><span>2-4 business days</span></div>
+        </div>
+      </section>
+    </main>
+
+    <section class="product-tabs">
+      <div class="tab-header">
+        <button class="tab active" data-tab="details">Details</button>
+        <button class="tab" data-tab="reviews">Reviews</button>
+        <button class="tab" data-tab="shipping">Shipping</button>
+      </div>
+      <div class="tab-panel active" data-panel="details">
+        <p>Made from a premium cotton blend with a brushed interior for all-day comfort. Designed with a relaxed fit and premium stitching for everyday wear.</p>
+      </div>
+      <div class="tab-panel" data-panel="reviews">
+        <div class="review-card">
+          <strong>Alex R.</strong>
+          <span>★★★★★</span>
+          <p>Super soft and fits exactly as expected. Great quality for the price.</p>
+        </div>
+      </div>
+      <div class="tab-panel" data-panel="shipping">
+        <p>Standard shipping is free on orders above $100. Express delivery is available for an additional fee.</p>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <div class="section-title-row">
+        <h3>You may also like</h3>
+        <div>
+          <button class="slider-btn" id="prevSlide">❮</button>
+          <button class="slider-btn" id="nextSlide">❯</button>
+        </div>
+      </div>
+      <div class="related-slider">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=400&q=80" alt="Product card" />
+          <p>Classic Tee</p>
+          <span>$39.00</span>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=400&q=80" alt="Product card" />
+          <p>Street Jacket</p>
+          <span>$89.00</span>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=400&q=80" alt="Product card" />
+          <p>Weekend Bag</p>
+          <span>$54.00</span>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Product card" />
+          <p>Minimal Sneakers</p>
+          <span>$72.00</span>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
